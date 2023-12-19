@@ -15,7 +15,7 @@ app.get("/",(req,res)=>{
     res.json("Welcome Xenon stack");
 })
 
-
-app.listen(5000,(req,res)=>{
-    console.log("server started at port 5000");
+const port = process.env.PORT||5000;
+app.listen(port,(req,res)=>{
+    console.log(`server started at port ${port}`);
 })
